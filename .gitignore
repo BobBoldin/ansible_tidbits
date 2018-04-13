@@ -1,0 +1,10 @@
+**/files/*.zip
+**/files/*.tgz
+**/files/*.tar
+**/files/*.jar
+**/files/*.bin
+**/files/*.gz
+**/files/*.msi
+*.retry
+*.swp
+*.pyc

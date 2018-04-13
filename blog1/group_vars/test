@@ -1,0 +1,7 @@
+etc_hosts:
+  ws-sips:
+    fqdn: ws-sips.cluster.local
+    ipv4: 192.68.241.207
+  ws-coffee:
+    fqdn: ws-coffee.cluster.local
+    ipv4: 192.68.241.173

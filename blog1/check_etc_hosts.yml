@@ -1,0 +1,11 @@
+---
+- hosts: "{{ target }}"
+
+  tasks:
+  - include_role:
+      name: etc_hosts
+
+  vars:
+    etc_hosts_deps:
+      - ws-sips
+      - ws-coffee
