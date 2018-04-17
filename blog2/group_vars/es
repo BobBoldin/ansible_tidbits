@@ -1,0 +1,3 @@
+es_cluster_name: "Elastic_Search"
+es_master_group: es_master
+es_client_group: es_client

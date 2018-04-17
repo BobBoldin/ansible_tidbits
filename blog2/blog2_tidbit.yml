@@ -1,0 +1,10 @@
+---
+- hosts: "{{ target }}"
+  gather_facts: true
+  connection: local
+
+  tasks:
+  - name: populate a test template
+    template:
+      src: testing.yml.j2
+      dest: ./output/{{ inventory_hostname}}_testing.yml

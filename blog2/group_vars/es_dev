@@ -1,0 +1,6 @@
+es_cluster_name: "Elastic_DEV"
+es_master_group: es_dev
+es_client_group: es_dev
+es_http_enabled: "true"
+es_node_data: "true"
+es_node_master: "true"

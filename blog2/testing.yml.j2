@@ -1,0 +1,14 @@
+# Looking for a value of 1 for a single host, or 2 for the 3 masters group in our tests
+discovery.zen.minimum_master_nodes: {{ (groups[es_master_group]|length)//2 + 1 }}
+
+# Looking for either a single host or the list of 3 hosts separated with a comma
+discovery.zen.ping.unicast.hosts: ["{% for host in groups[es_master_group] %}{{ hostvars[host].inventory_hostname_short }}"{% if not loop.last %},"{% endif %}{% endfor %}]
+
+#Http should only be true for single node or client nodes
+http.enabled: {{ es_http_enabled }}
+
+#Master should only be true for single node or master nodes
+node.master: {{ es_node_master }}
+
+#Data should only be true for single node or data nodes
+node.data: {{ es_node_data }}
