@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: true
+  connection: local
+
+  roles:
+  - test_loops

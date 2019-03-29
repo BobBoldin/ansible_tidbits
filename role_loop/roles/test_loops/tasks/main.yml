@@ -1,0 +1,10 @@
+---
+# tasks file for test_loops
+- name: use role in loop
+  include_role:
+    name: debug_info
+  vars:
+    java_home : "{{ item }}"
+  loop: "{{ lookup('fileglob', '/home/rboldin/projects/ansible_tidbits/role_loop/files/java*').split(',') }}"
+  loop_control:
+    label: "working on {{ item }}"

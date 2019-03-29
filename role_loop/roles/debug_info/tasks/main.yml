@@ -1,0 +1,5 @@
+---
+# tasks file for debug_info
+- name: debug the value of java_home var
+  debug:
+    msg: "The value is: {{ java_home }}"
