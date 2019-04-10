@@ -1,0 +1,3 @@
+---
+- debug:
+    msg: "{{ item.key }} {{ item.value.secrets }}"

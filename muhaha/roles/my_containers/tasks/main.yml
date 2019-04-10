@@ -1,0 +1,5 @@
+---
+# tasks file for my_containers
+- name: Configure defined containers 
+  include_tasks: create_container.yml
+  loop: "{{ containers | dict2items }}"
