@@ -1,5 +1,5 @@
 ### Sample Run ###
-'''
+```
 ansible-playbook test_role.yml 
  [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
 
@@ -204,4 +204,4 @@ ok: [localhost] => {
 
 PLAY RECAP *******************************************************************************************************************************************************************************************************************************
 localhost                  : ok=7    changed=0    unreachable=0    failed=0
-'''
+```
