@@ -1,5 +1,14 @@
 ---
 # tasks file for my_containers
+
+- name: Containers before Modification
+  debug: var=containers
+
 - name: Configure defined containers 
   include_tasks: create_container.yml
   loop: "{{ containers | dict2items }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Containers after Modification
+  debug: var=containers

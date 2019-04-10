@@ -1,3 +1,6 @@
 ---
-- debug:
-    msg: "{{ item.key }} {{ item.value.secrets }}"
+- set_fact:
+    containers: "{{ containers | combine({ item.key: {'secrets': {secret.key: 100 | random }}}, recursive=True) }}"
+  loop: "{{ item.value.secrets | dict2items }}"
+  loop_control:
+    loop_var: secret 
