@@ -19,22 +19,21 @@
           GF_DATABASE_PASSWORD: https://MYVAULT.vault.azure.net/secrets/grafana-aad-discovery3/ff177dcf5a734ad69563908fdcb45933
           GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET: https://MYVAULT.vault.azure.net/secrets/grafana-aad-discovery4/ff177dcf5a734ad69563908fdcb45933
         variables:
-          docker:
-            - GF_INSTALL_PLUGINS: grafana-azure-monitor-datasource,grafana-azure-data-explorer-datasource
-            - GF_SESSION_PROVIDER: postgres
-            - GF_DATABASE_TYPE: postgres
-            - GF_DATABASE_HOST: redacted.postgres.database.azure.com
-            - GF_DATABASE_NAME: grafana
-            - GF_DATABASE_USER: sysadmin@prometheus-monitoring-postgresql
-            - GF_SERVER_ROOT_URL: https://grafana.production.redacted/
-            - GF_DATABASE_SSL_MODE: require
-            - GF_AUTH_GENERIC_OAUTH_ENABLED: true
-            - GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP: true
-            - GF_AUTH_GENERIC_OAUTH_CLIENT_ID: redacted
-            - GF_AUTH_GENERIC_OAUTH_SCOPES: openid email profile
-            - GF_AUTH_GENERIC_OAUTH_AUTH_URL: https://login.microsoftonline.com/redacted/oauth2/v2.0/authorize
-            - GF_AUTH_GENERIC_OAUTH_TOKEN_URL: https://login.microsoftonline.com/redacted/oauth2/v2.0/token
-            - GF_AUTH_GENERIC_OAUTH_API_URL: https://graph.microsoft.com/oidc/userinfo
+          GF_INSTALL_PLUGINS: grafana-azure-monitor-datasource,grafana-azure-data-explorer-datasource
+          GF_SESSION_PROVIDER: postgres
+          GF_DATABASE_TYPE: postgres
+          GF_DATABASE_HOST: redacted.postgres.database.azure.com
+          GF_DATABASE_NAME: grafana
+          GF_DATABASE_USER: sysadmin@prometheus-monitoring-postgresql
+          GF_SERVER_ROOT_URL: https://grafana.production.redacted/
+          GF_DATABASE_SSL_MODE: require
+          GF_AUTH_GENERIC_OAUTH_ENABLED: true
+          GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP: true
+          GF_AUTH_GENERIC_OAUTH_CLIENT_ID: redacted
+          GF_AUTH_GENERIC_OAUTH_SCOPES: openid email profile
+          GF_AUTH_GENERIC_OAUTH_AUTH_URL: https://login.microsoftonline.com/redacted/oauth2/v2.0/authorize
+          GF_AUTH_GENERIC_OAUTH_TOKEN_URL: https://login.microsoftonline.com/redacted/oauth2/v2.0/token
+          GF_AUTH_GENERIC_OAUTH_API_URL: https://graph.microsoft.com/oidc/userinfo
       prometheus:
          image: prom/prometheus:v2.6.0
          ports: 9090:9090
